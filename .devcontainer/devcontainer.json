@@ -29,6 +29,13 @@
 			"streetsidesoftware.code-spell-checker",
 			"vscjava.vscode-java-pack"
 			]
+		},
+		"codespaces": {
+		      "repositories": {
+		        "NgYiKai/*": {
+		          "permissions": "write-all"
+		        }
+		      }
 		}
 	}
 
