@@ -5,9 +5,9 @@
             "name": "Launch App",
             "request": "launch",
             "cwd": "${workspaceFolder}",
-            "console": "internalConsole",
+            "console": "integratedTerminal",
             "stopOnEntry": false,
-            "mainClass": "com.mycompany.app.App",
+            "mainClass": "com.craftinginterpreters.kai.Kai",
             "args": "",
             "projectName": "my-app"
         }
