@@ -2,6 +2,21 @@
     "configurations": [
         {
             "type": "java",
+            "name": "AstPrinter",
+            "request": "launch",
+            "mainClass": "com.craftinginterpreters.kai.AstPrinter",
+            "projectName": "my-app"
+        },
+        {
+            "type": "java",
+            "name": "GenerateAst",
+            "request": "launch",
+            "mainClass": "com.craftinginterpreters.tool.GenerateAst",
+            "projectName": "my-app",
+            "args": "/workspaces/interpreter/src/main/java/com/craftinginterpreters"
+        },
+        {
+            "type": "java",
             "name": "Launch App",
             "request": "launch",
             "cwd": "${workspaceFolder}",
