@@ -55,16 +55,24 @@
   }
 
   private static void run(String source) {
-    Scanner scanner = new Scanner(source);
-    List<Token> tokens = scanner.scanTokens();
+      Scanner scanner = new Scanner(source);
+      List<Token> tokens = scanner.scanTokens();
 
-    Parser parser = new Parser(tokens);
-    List<Stmt> statements = parser.parse();
+      Parser parser = new Parser(tokens);
+      List<Stmt> statements = parser.parse();
 
-    // Stop if there was a syntax error.
-    if (hadError) return;
+      // Stop if there was a syntax error.
+      if (hadError)
+        return;
 
-    interpreter.interpret(statements);
+      Resolver resolver = new Resolver(interpreter);
+      resolver.resolve(statements);
+
+      // Stop if there was a resolution error.
+      if (hadError)
+        return;
+
+      interpreter.interpret(statements);
   }
 
   static void error(int line, String message) {
